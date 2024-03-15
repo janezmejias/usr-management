@@ -1,0 +1,28 @@
+server:
+  servlet:
+    context-path: /api/user
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+
+jwt:
+  secret-key: t2SFPBxZKMSpf/P8GC1rdU0M4UaGdu01XHEn581Z+EM=
+  exp-time: 3600000
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    packages-to-scan: com.usermanagement.core.infrastructure.controller
+  api-docs.path: /api-docs
